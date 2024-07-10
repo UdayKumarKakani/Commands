@@ -3,6 +3,7 @@ pipeline {
  	stages {
 		stage('Checkout') {
  			steps {
+				sh node --version
  				echo "$PATH"
 				echo "$env.BUILD_NUMBER"
 				echo "$env.BUILD_ID"

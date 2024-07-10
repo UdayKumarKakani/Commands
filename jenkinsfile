@@ -1,11 +1,8 @@
-pipeline {
-    agent any
-       stages {
-        stage('Test') {
-            steps {
-          	 echo "$PATH"
-	   	echo "$env.BUILD_NUMBER"
-            }
-        }
-    }
+node {
+	stage('Build') {
+		echo "Build"
+	}
+	stage('Test') {
+		echo "Test"
+	}
 }

@@ -1,9 +1,15 @@
-node {
-	stage('Build') {
-		echo "Build"
-		error 'There is an Error'
-	}
-	stage('Test') {
-		echo "Test1"
-	}
-}
+ pipeline {
+ 	agent any
+ 	stages {
+ 		stage('Build') {
+ 			steps {
+ 				echo "Build"
+ 			}
+ 		}
+ 		stage('Test') {
+ 			steps {
+ 				echo "Test"
+ 			}
+ 		}
+ 	}
+ }
